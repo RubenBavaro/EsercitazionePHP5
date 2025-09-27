@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Consigli acquisto televisore</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="col-md-6">
+            <div class="card shadow p-4">
+                <h1 class="text-center mb-4">Inserisci le caratteristiche del televisore</h1>
+                <form action="static/php/index.php" method="post">
+                    <div class="form-group">
+                        <label>Marca</label>
+                        <input type="text" name="marca" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Modello</label>
+                        <input type="text" name="modello" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Numero porte HDMI</label>
+                        <input type="number" name="porte_hdmi" min="0" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Refresh rate (Hz)</label>
+                        <input type="number" name="refresh" min="1" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Risoluzione</label>
+                        <select name="risoluzione" class="form-control" required>
+                            <option value="HD Ready">HD Ready</option>
+                            <option value="Full HD">Full HD</option>
+                            <option value="Ultra HD">Ultra HD</option>
+                            <option value="4K">4K</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Invia</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
